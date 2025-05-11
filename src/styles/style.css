@@ -1,0 +1,484 @@
+/* RESET DE ESTILOS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUENTES */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* HEADER */
+.header {
+    background-color: #FF6347;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header .logo {
+    font-size: 3rem;
+    font-family: 'Pacifico', cursive;
+}
+
+.header .slogan {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #333;
+}
+
+/* Estilos de la barra de navegación */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    display: inline-block;
+    background-color: #ff6f61; /* Color de fondo */
+    color: white; /* Color de texto */
+    font-size: 1.2rem;
+    padding: 10px 20px; /* Espaciado del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Eliminar subrayado */
+    transition: background-color 0.3s, transform 0.3s; /* Efecto de transición */
+    padding: 15px 50px;  
+}
+
+.navbar ul li a:hover {
+    background-color: #e65c4f; /* Color de fondo al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+/* MAIN */
+main {
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
+/* SECCIÓN MENU */
+.seccion-menu {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.seccion-menu h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.menu-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.card .precio {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #FF6347;
+}
+
+/* GALERÍA */
+.galeria {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.galeria-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.galeria-contenedor figure {
+    width: 300px;
+    transition: transform 0.3s ease; /* Suaviza el efecto de transición */
+}
+
+.galeria-contenedor figure:hover {
+    transform: scale(1.1); /* Zoom al pasar el mouse */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Agrega sombra al hacer zoom */
+}
+
+.galeria-contenedor img {
+    width: 85%;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Suaviza el efecto de transición de la imagen */
+}
+
+.galeria-contenedor figure:hover img {
+    transform: scale(1.1); /* Efecto de zoom en la imagen */
+}
+
+.galeria-contenedor figcaption {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* SECCIÓN NUESTRAS ESPECIALIDADES */
+.nuestras-especialidades {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.nuestras-especialidades h3 {
+    font-size: 2rem;
+    color: #FF6347; /* Color vibrante para el título */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nuestras-especialidades ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.nuestras-especialidades li {
+    font-size: 1.2rem;
+    color: #333;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nuestras-especialidades li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nuestras-especialidades li::before {
+    content: "🍕"; /* Agrega un ícono antes de cada especialidad */
+    margin-right: 10px;
+}
+
+/* NOSOTROS */
+.nosotros {
+    margin-bottom: 40px;
+}
+
+.nosotros h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.nosotros article {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.nosotros-img {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.nosotros-img img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.nosotros h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.nosotros ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.nosotros ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.dato-curioso {
+    background-color: #ffebcd;
+    padding: 15px;
+    margin-top: 20px;
+    font-style: italic;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* TESTIMONIOS */
+.testimonios {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.testimonios h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-cards blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 15px 0;
+}
+
+.testimonial-cards cite {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+/* FORMULARIO DE CONTACTO */
+.formulario-contacto {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.formulario-contacto label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.formulario-contacto input, 
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.formulario-contacto button {
+    background-color: #FF6347;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario-contacto button:hover {
+    background-color: #e55347;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-info p {
+    font-size: 1.1rem;
+}
+
+.footer-info a {
+    color: #FF6347;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+/* MEDIA QUERY PARA 425px (Móviles pequeños) */
+@media (max-width: 425px) {
+    .header .logo {
+      font-size: 2rem;
+    }
+
+    .header .slogan {
+      font-size: 1rem;
+    }
+
+    .navbar ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar ul li {
+      margin: 10px 0;
+    }
+
+    .menu-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+
+    .galeria-contenedor {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .galeria-contenedor figure {
+      width: 80%;
+    }
+
+    .nosotros-img img {
+      width: 90%;
+    }
+
+    .formulario-contacto input,
+    .formulario-contacto textarea {
+      font-size: 1rem;
+    }
+
+    .footer-info p {
+      font-size: 1rem;
+    }
+}
+
+/* MEDIA QUERY PARA 768px (Tabletas) */
+@media (max-width: 768px) {
+    .header .logo {
+      font-size: 2.5rem;
+    }
+
+    .header .slogan {
+      font-size: 1.2rem;
+    }
+
+    .navbar ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar ul li {
+      margin: 15px 0;
+    }
+
+    .menu-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 70%;
+      margin-bottom: 20px;
+    }
+
+    .galeria-contenedor {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .galeria-contenedor figure {
+      width: 80%;
+    }
+
+    .nosotros-img img {
+      width: 80%;
+    }
+
+    .formulario-contacto input,
+    .formulario-contacto textarea {
+      font-size: 1.1rem;
+    }
+
+    .footer-info p {
+      font-size: 1.1rem;
+    }
+}
+
+/* MEDIA QUERY PARA 1024px (Tabletas grandes / Laptops pequeñas) */
+@media (max-width: 1024px) {
+    .header .logo {
+      font-size: 3rem;
+    }
+
+    .navbar ul {
+      justify-content: space-between;
+    }
+
+    .menu-cards {
+        flex-direction: row;
+        justify-content: space-between;
+        }
+        
+        css
+        Copiar
+        Editar
+        .card {
+          width: 48%;
+        }
+        
+        .galeria-contenedor {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        
+        .galeria-contenedor figure {
+          width: 48%;
+        }
+        
+        .formulario-contacto input,
+        .formulario-contacto textarea {
+          font-size: 1.2rem;
+        }
+        
+    }
