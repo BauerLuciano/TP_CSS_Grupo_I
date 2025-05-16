@@ -6,7 +6,7 @@
   <meta name="author" content="Grupo Pizza Nova" />
   <meta name="description" content="Pizza Nova: Pizzería artesanal en tu barrio. ¡El verdadero sabor italiano!" />
   <title>Pizza Nova | Pizzería Artesanal</title>
-  <link rel="stylesheet" href="/src/styles/style.css" />
+  <link rel="stylesheet" href="./src/styles/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
@@ -27,6 +27,7 @@
       <li><a href="#menu">Menú</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#registrar">Registrar usuario</a></li>
     </ul>
   </nav>
 
@@ -128,6 +129,23 @@
         <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
         <button type="submit">Enviar mensaje</button>
+        <script>
+          const formulario = document.querySelector(".formulario-contacto form");
+        
+          formulario.addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que se recargue la página
+            // Crear o actualizar el mensaje
+            let mensajeEstado = document.getElementById("mensaje-estado");
+        
+            if (!mensajeEstado) {
+              mensajeEstado = document.createElement("p");
+              mensajeEstado.id = "mensaje-estado";
+              formulario.appendChild(mensajeEstado);
+            }
+        
+            mensajeEstado.textContent = "Su pedido está en proceso.";
+          });
+        </script>
       </form>
     </section>
 
