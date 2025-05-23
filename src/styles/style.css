@@ -341,6 +341,34 @@ main {
     margin-top: 20px;
 }
 
+/* Estilo para el párrafo "Integrantes:" */
+p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ffff;
+  }
+  
+  /* Estilo para la lista de integrantes */
+  ul {
+    list-style-type: none; /* Cambia el tipo de viñeta */
+    padding-left: 1.5rem;    /* Espacio para las viñetas */
+    color: #ffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Estilo para cada integrante */
+  ul li {
+    margin-bottom: 0.3rem;
+    transition: color 0.3s ease;
+    cursor: default;
+  }
+  
+  /* Cambiar color al pasar el mouse sobre un integrante */
+  ul li:hover {
+    color: #007BFF; /* Azul suave */
+  }
+
 /* MEDIA QUERY PARA 425px (Móviles pequeños) */
 @media (max-width: 425px) {
     .header .logo {
@@ -443,6 +471,34 @@ main {
     .footer-info p {
       font-size: 1.1rem;
     }
+
+    /* Estilo para el párrafo "Integrantes:" */
+p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Estilo para la lista de integrantes */
+ul {
+  list-style-type: square; /* Cambia el tipo de viñeta */
+  padding-left: 1.5rem;    /* Espacio para las viñetas */
+  color: #555;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo para cada integrante */
+ul li {
+  margin-bottom: 0.3rem;
+  transition: color 0.3s ease;
+  cursor: default;
+}
+
+/* Cambiar color al pasar el mouse sobre un integrante */
+ul li:hover {
+  color: #007BFF; /* Azul suave */
+}
 }
 
 /* MEDIA QUERY PARA 1024px (Tabletas grandes / Laptops pequeñas) */
@@ -480,5 +536,11 @@ main {
         .formulario-contacto textarea {
           font-size: 1.2rem;
         }
+
+        button[type="submit"] {
+            transition: all 0.3s ease;
+          }
+
+        
         
     }
