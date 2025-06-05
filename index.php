@@ -1,8 +1,35 @@
+<?php
+// Procesamiento del formulario
+$mensaje_enviado = false;
+$error = "";
+$nombre = "";
+$email = "";
+$asunto = "";
+$mensaje = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = htmlspecialchars(trim($_POST["nombre"] ?? ''));
+    $email = htmlspecialchars(trim($_POST["email"] ?? ''));
+    $asunto = htmlspecialchars(trim($_POST["asunto"] ?? ''));
+    $mensaje = htmlspecialchars(trim($_POST["mensaje"] ?? ''));
+
+    // Validar email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = "Correo inválido.";
+    } elseif (empty($nombre) || empty($asunto) || empty($mensaje)) {
+        $error = "Por favor complete todos los campos.";
+    } else {
+        // Aquí podés enviar mail o guardar datos
+
+        $mensaje_enviado = true;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Grupo Pizza Nova" />
     <meta
       name="description"
@@ -130,33 +157,75 @@
       <!-- FORMULARIO DE CONTACTO -->
       <section class="formulario-contacto" id="contacto">
         <h2>📞 Contacto</h2>
-        <form>
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required />
 
-          <label for="email">Correo:</label>
-          <input type="email" id="email" name="email" required />
+        <?php if ($mensaje_enviado): ?>
+            <div class="mensaje-exito" style="background:#d4edda; padding:15px; border-radius:5px; margin-bottom:20px;">
+              <h3>Gracias por contactarnos, <?= $nombre ?>!</h3>
+              <p>Hemos recibido tu mensaje con el asunto: <strong><?= $asunto ?></strong></p>
+              <p>Nos pondremos en contacto contigo a la brevedad a <strong><?= $email ?></strong>.</p>
+              <a href="index.php">Volver al sitio</a>
+            </div>
+        <?php else: ?>
+          <form action="index.php" method="POST" novalidate>
+            <label for="nombre">Nombre:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              value="<?= htmlspecialchars($nombre) ?>"
+            />
 
-          <label for="asunto">Asunto:</label>
-          <select id="asunto" name="asunto" required>
-            <option value="" disabled selected>Selecciona un asunto</option>
-            <option value="Consulta sobre productos">
-              Consulta sobre productos
-            </option>
-            <option value="Problema con un pedido">
-              Problema con un pedido
-            </option>
-            <option value="Sugerencia o comentario">
-              Sugerencia o comentario
-            </option>
-          </select>
+            <label for="email">Correo:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              value="<?= htmlspecialchars($email) ?>"
+            />
 
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-          <p id="contador">0 caracteres</p>
+            <label for="asunto">Asunto:</label>
+            <select id="asunto" name="asunto" required>
+              <option value="" disabled <?= empty($asunto) ? "selected" : "" ?>>
+                Selecciona un asunto
+              </option>
+              <option
+                value="Consulta sobre productos"
+                <?= ($asunto == "Consulta sobre productos") ? "selected" : "" ?>
+              >
+                Consulta sobre productos
+              </option>
+              <option
+                value="Problema con un pedido"
+                <?= ($asunto == "Problema con un pedido") ? "selected" : "" ?>
+              >
+                Problema con un pedido
+              </option>
+              <option
+                value="Sugerencia o comentario"
+                <?= ($asunto == "Sugerencia o comentario") ? "selected" : "" ?>
+              >
+                Sugerencia o comentario
+              </option>
+            </select>
 
-          <button type="submit">Enviar mensaje</button>
-        </form>
+            <label for="mensaje">Mensaje:</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              required
+            ><?= htmlspecialchars($mensaje) ?></textarea>
+
+            <?php if ($error): ?>
+              <p style="color: red;"><?= $error ?></p>
+            <?php endif; ?>
+
+            <button type="submit">Enviar mensaje</button>
+          </form>
+        <?php endif; ?>
+
       </section>
     </main>
 
@@ -172,12 +241,12 @@
           >
         </p>
       </div>
-       <p class="copyright">© 2025 Pizza Nova. Todos los derechos reservados.</p>
-      <br>
-       <p class="integrantes">Integrantes:</p>
+      <p class="copyright">© 2025 Pizza Nova. Todos los derechos reservados.</p>
+      <br />
+      <p class="integrantes">Integrantes:</p>
       <ul>
         <li>Matias Maciel</li>
-        <li>Leonel Carballo </li>
+        <li>Leonel Carballo</li>
         <li>Luciano Bauer</li>
         <li>Ricardo Olivieri</li>
       </ul>

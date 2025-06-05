@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f6d365, #fda085); /* masa con salsa */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor principal */
+.register-container {
+  background-color: #fffaf0;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 32px;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+/* Títulos */
+h2 {
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+/* Mensaje de error o éxito */
+.mensaje {
+  color: #c0392b;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Formulario */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-form label {
+  text-align: left;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.register-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.register-form input:focus {
+  border-color: #27ae60;
+  outline: none;
+}
+
+/* Botón */
+.register-form button {
+  padding: 12px;
+  background-color: #27ae60; /* verde albahaca */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-form button:hover {
+  background-color: #219150;
+}
+
+/* Enlace */
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.login-link a {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: bold;
+}

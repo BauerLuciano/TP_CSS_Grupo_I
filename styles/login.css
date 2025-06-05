@@ -1,0 +1,100 @@
+/* Fondo temático pizza */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffe259, #ffa751); /* queso y masa */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor central */
+.login-container {
+  background-color: #fff8f0;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 32px;
+  color: #e74c3c; /* rojo tomate */
+  margin-bottom: 10px;
+}
+
+/* Títulos */
+h2 {
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+/* Mensaje de error */
+.mensaje {
+  color: #c0392b;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form label {
+  text-align: left;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.login-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #27ae60; /* verde albahaca */
+  outline: none;
+}
+
+/* Botón */
+.login-form button {
+  padding: 12px;
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #c0392b;
+}
+
+/* Enlace */
+.register-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.register-link a {
+  color: #27ae60;
+  text-decoration: none;
+  font-weight: bold;
+}
+.register-link a:hover {
+  text-decoration: underline;
+}
